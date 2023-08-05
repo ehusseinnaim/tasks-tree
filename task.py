@@ -91,6 +91,9 @@ internet = Task("The Internet")
 
 # Internet subtasks
 what_is_the_internet = Task('what is the internet', internet)
+# Set the parent subtasks
+internet_subtasks = [what_is_the_internet]
+internet.add_subtasks(internet_subtasks)
 
 # what_is_the_internet subtasks
 http_protocol = Task("What is an HTTP protocol ")
@@ -100,8 +103,6 @@ udp_protocol = Task("What is a UDP protocol ")
 # set what_is_the_internet subtasks
 what_is_the_internet.add_subtasks([http_protocol, ssl_protocol, udp_protocol])
 
-# Set the parent subtasks
-internet_subtasks = [what_is_the_internet]
-internet.add_subtasks(internet_subtasks)
+
 
 print(internet.tasktree)
