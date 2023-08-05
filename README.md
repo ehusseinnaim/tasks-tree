@@ -1,16 +1,13 @@
-# Problem state 
+# Problem Statement
 
-## Creating a Task tree with subtasks and return a tasktree groups the tasks by the parent class
+## Creating a Task Tree with Subtasks and Grouping Tasks by Parent Class
 
-> let's say we want to create a todo app with tasks  and we have created a task 
+Imagine we are developing a todo app with tasks, and we have already created a basic `Task` class to represent individual tasks. For example, we have a task called "Learn how the internet works," and everything seems fine at this point.
 
-> the task is ("Learn how the internet works") now in this point we have no problem at all 
+However, as we progress, we encounter a challenge when we want to add subtasks to existing tasks. Each subtask is an instance of the class `Task` and also has a `subtasks` attribute, allowing us to create a nested task tree.
 
-> But when we want to add subtasks we have to loop only in one or tow levels or more than that 
+Currently, our solution allows us to loop through one or two levels of subtasks, but it becomes limited when we need to go deeper into the nested subtasks.
 
-> We can hard code the solution to get the Task subtasks but we only have access to one level 
+Hardcoding the solution to obtain subtasks is one approach, but it restricts our ability to traverse an unlimited number of levels in the task tree.
 
-> Which means if we want to get deeper with these objects we have to limit or hard core how much levels we can go 
-
-> in the file [tasks.py](./task.py) you can find a breakdown for the solution 
-
+In the file [tasks.py](./task.py), we provide a breakdown of our solution to tackle this issue. We aim to create a flexible and scalable solution that allows us to work with tasks and their subtasks at any level, avoiding the need for hardcoded limitations.
